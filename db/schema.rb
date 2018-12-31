@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2018_12_30_200216) do
 
   create_table "records", force: :cascade do |t|
     t.bigint "habit_id"
-    t.date "completed_on", default: "2018-12-30"
+    t.date "completed_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["habit_id"], name: "index_records_on_habit_id"

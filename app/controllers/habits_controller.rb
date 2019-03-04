@@ -8,6 +8,10 @@ class HabitsController < ApplicationController
     Habit.create!(habit_params)
   end
 
+  def destroy
+    Habit.destroy(params[:id])
+  end
+
   private
 
   def habit_params

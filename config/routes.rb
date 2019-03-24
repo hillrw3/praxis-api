@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :habits, only: [:index, :create, :destroy]
-  resources :records, only: [:create]
-  get '/progress_report' => "progress_report#show"
+  namespace :api do
+    resources :habits, only: [:index, :create, :destroy]
+    post '/habits/:id/complete' => "habits#complete"
+    get '/progress_report' => "progress_report#show"
+  end
 end

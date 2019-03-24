@@ -5,6 +5,6 @@ class Record < ApplicationRecord
   private
 
   def set_completed_on
-    self.completed_on = Date.today
+    self.completed_on ||= Date.today
   end
 end

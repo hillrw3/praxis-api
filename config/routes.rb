@@ -4,4 +4,7 @@ Rails.application.routes.draw do
     post '/habits/:id/complete' => "habits#complete"
     get '/progress_report' => "progress_report#show"
   end
+
+  root "ui#show"
+  get '*path' => 'ui#show'
 end
